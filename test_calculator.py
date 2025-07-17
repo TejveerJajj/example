@@ -1,5 +1,5 @@
 import unittest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, exponent
 
 class TestCalculator(unittest.TestCase):
 
@@ -24,6 +24,12 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(divide(-1, -1), 1)
         self.assertEqual(divide(5, 2), 2.5)
         self.assertEqual(divide(1, 0), "Error! Division by zero.")
+
+    def test_exponent(self):
+        self.assertEqual(exponent(2), 4)
+        self.assertEqual(exponent(-1), 1)
+        self.assertEqual(exponent(0), 0)
+        self.assertEqual(exponent(2.5), 6.25)
 
 if __name__ == '__main__':
     unittest.main()

@@ -12,15 +12,19 @@ def divide(x, y):
         return "Error! Division by zero."
     return x / y
 
+def exponent(x):
+    return x ** 2
+
 def main():
     print("Select operation:")
     print("1.Add")
     print("2.Subtract")
     print("3.Multiply")
     print("4.Divide")
+    print("5.Exponent")
 
     while True:
-        choice = input("Enter choice(1/2/3/4): ")
+        choice = input("Enter choice(1/2/3/4/5): ")
 
         if choice in ('1', '2', '3', '4'):
             try:
@@ -45,6 +49,19 @@ def main():
             next_calculation = input("Let's do next calculation? (yes/no): ")
             if next_calculation == "no":
               break
+
+        elif choice == '5':
+            try:
+                num1 = float(input("Enter a number: "))
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+                continue
+            print(num1, "^", 2, "=", exponent(num1))
+
+            next_calculation = input("Let's do next calculation? (yes/no): ")
+            if next_calculation == "no":
+              break
+
         else:
             print("Invalid Input")
 

@@ -8,6 +8,7 @@ This is a simple command-line calculator built with Python. It allows users to p
 - **Subtraction:** Subtracts the second number from the first.
 - **Multiplication:** Multiplies two numbers.
 - **Division:** Divides the first number by the second. Includes error handling for division by zero.
+- **Exponent:** Calculates the square of a number.
 
 ## How to Run
 1. Make sure you have Python installed.
